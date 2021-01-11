@@ -1,0 +1,70 @@
+*{
+    font-family: 'Mulish', sans-serif;
+}
+
+.logoloc{
+    margin-left: 130.5px;
+    margin-top: 109.52px;
+}
+
+.slogantext{
+    margin-left: 130.5px;
+    margin-top: 30.14px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 32px;
+
+    letter-spacing: 0.75px;
+
+    color: #6E7191;
+}
+
+.explore{
+    margin-top: 109.1px;
+    margin-left: 88px;
+    margin-bottom: 31px;
+}
+
+.footer-font{
+    margin-left: 88px;
+    font-size: 14px;
+    line-height: 18px;
+    
+    letter-spacing: 0.5px;
+        
+    color: #4E4B66;
+    margin-bottom: 14.7px;
+}
+
+.our-sponsor{
+    margin-top: 109.1px;
+    margin-left: 88px;
+    margin-bottom: 31px;
+}
+
+.sponsor{
+    margin-bottom: 25px;
+    margin-left: 88px;
+}
+
+.follow-us{
+    margin-top: 109.1px;
+    margin-left: 88px;
+    margin-bottom: 31px;
+}
+
+.footer-tickitz{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+
+    letter-spacing: 0.5px;
+
+    /* Text - Body */
+
+    color: #4E4B66;
+    margin-top: 51px;
+    margin-bottom: 48px;
+}

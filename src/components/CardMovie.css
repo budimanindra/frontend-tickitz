@@ -1,0 +1,21 @@
+*{
+    font-family: 'Mulish', sans-serif;
+}
+
+.cardticket{
+    height: 350px;
+    width: 381px;
+    border-radius: 8px;
+}
+
+.buttoncard{
+    background: #5F2EEA;
+
+    box-shadow: 0px 8px 24px #5f2eea3d;
+    border-radius: 4px;
+    border-color: #5F2EEA;
+}
+
+.buttoncard:hover{
+    background: #8158f1;
+}

@@ -1,0 +1,146 @@
+.mini1, .mini2, .mini3{
+    width: 107px;
+    height: 352px;
+    border-radius: 10px;
+}
+
+.mini1{
+    margin-top: 116px;
+    margin-right: 24px;
+}
+
+.mini2{
+    margin-top: 80px;
+    margin-right: 24px;
+}
+
+.mini3{
+    margin-top: 48px;
+}
+
+.title-home{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 30px;
+
+    color: #A0A3BD;
+
+    margin-top: 200px;
+}
+
+.sub-title-home{
+    color: #5F2EEA;
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.card-now-showing{
+    padding: 16px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.view-all1, .view-all2{
+    margin-left: 886px;
+
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+
+    letter-spacing: 0.15px;
+
+    color: #5F2EEA;
+    border: none;
+    background-color: transparent;
+}
+
+.view-all1{
+    margin-bottom: 74px;
+}
+
+.view-all2{
+    margin-bottom: 42px;
+}
+
+
+
+
+.margin-member{
+    text-align: center;
+    margin-top: 218px;
+    margin-bottom: 96px;
+}
+
+.text-join{
+    margin-left: 442px;
+}
+
+.submit-email{
+    margin-left: 400px;
+    margin-top: 48px;
+    margin-bottom: 40px;
+}
+
+.moviegoers{
+    font-size: 48px;
+    color: #5F2EEA;
+    font-weight: bolder;
+}
+
+.movie-title{
+    margin-top: 24px;
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.movie-genre{
+    font-size: 12px;
+}
+
+.vanguard{
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 114%;
+
+text-align: center;
+letter-spacing: 0.25px;
+
+color: #4E4B66;
+}
+
+.member-text{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+    /* or 171% */
+
+    margin-left: 360px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    margin-bottom: 48px;
+}
+
+.join-now-button{
+    margin-left: 20px;
+    background-color: #5F2EEA;
+    border-color: #5F2EEA;
+}
+
+.margin-form-email{
+    margin-left: 380px;
+    width: 40%;
+}
+
+.custom-text{
+    color: #5F2EEA;
+}
+
+.custom-text:hover{
+    color: white;
+}

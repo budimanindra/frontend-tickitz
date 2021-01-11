@@ -1,0 +1,19 @@
+*{
+    font-family: 'Mulish', sans-serif;
+}
+
+.showtimes{
+    margin-top: 70px;
+    margin-left: 548px;
+}
+
+.showlocdate{
+    margin-top: 40px;
+    margin-left: 387px;
+}
+
+.text-view{
+    margin-top: 48px;
+    margin-bottom: 64px;
+    color : #5F2EEA;
+}

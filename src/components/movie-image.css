@@ -1,0 +1,29 @@
+*{
+    font-family: 'Mulish', sans-serif;
+}
+
+.margin-top-detail{
+    margin-top: 144px;
+}
+
+.margin-col-image{
+    margin-left: 70px;
+}
+
+.cardbox{
+    height: 458px;
+    width: 332px;
+    border-radius: 16px;
+}
+
+.movie-image{
+    height: 362.8311767578125px;
+    width: 236.71746826171875px;
+    margin-left: 47.6416015625px;
+    margin-top: 47.58441162109375px;
+    border-radius: 6px;
+}
+
+.margin-col-description{
+    margin-left: 120px;
+}
