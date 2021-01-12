@@ -1,0 +1,55 @@
+.order-page-margin{
+    margin-top: 100px;
+}
+
+.sponsor-dimension{
+    height: 23px;
+    width: 132.13px;
+}
+
+.font-order-info{
+    font-size: 10px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+}
+
+.margin-order-info{
+    margin-left: 760px;
+    margin-top: -570px;
+}
+
+.order-page-button{
+    color: #5F2EEA;
+    font-weight: bold;
+    border-color: #5F2EEA;
+    margin-right: 16px;
+    width: 300px;
+    height: 56px;
+    font-size: 14px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.order-page-button:hover{
+    background-color: #5F2EEA;
+    border-color: #5F2EEA;
+}
+
+.form-check-input:checked{
+    background-color: red;
+    content: none;
+}
+
+.form-check-input{
+    background-color: yellow;
+    content: none;
+}
+
+.button-seat{
+    background-color: red;
+    width: 26px;
+    height: 26px;
+}
+.button-seat:focus{
+    background-color: yellow;
+}

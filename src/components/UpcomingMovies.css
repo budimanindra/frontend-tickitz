@@ -25,7 +25,7 @@
 }
 
 
-.btn-outline-primary{
+.upcoming-button{
     color: #5F2EEA;
     font-weight: bold;
     border-color: #5F2EEA;
@@ -37,7 +37,7 @@
     text-align: center;
 }
 
-.btn-outline-primary:hover{
+.upcoming-button:hover{
     color: white;
     background-color: #5F2EEA;
     font-weight: bold;
