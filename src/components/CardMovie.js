@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import Ebv from '../components/assets/sponsor1.png'
-import Cineone from '../components/assets/sponsor2.png'
-import Hiflix from '../components/assets/sponsor3.png'
 import './CardMovie.css'
 
 class CardMovie extends Component {
