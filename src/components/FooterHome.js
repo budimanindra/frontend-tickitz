@@ -17,7 +17,7 @@ class FooterHome extends Component {
         <div className="row">
           <div className="col-md-4">
             <div className="row">
-            <a className='logoloc' href="#"> <img src={LogoTickitzBottom} alt="Logo Tickitz"/></a>
+            <a className='logoloc' href="#"><img src={LogoTickitzBottom} alt="Logo Tickitz"/></a>
             </div>
             <div className="row">
               <p className="slogantext">Stop waiting in line, Buy tickets <br>

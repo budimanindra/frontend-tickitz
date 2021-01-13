@@ -164,7 +164,7 @@ class PaymentPage extends Component {
 
             <div className='col-md-8 ml-2 d-flex justify-content-between mt-5'>
               <button className='btn btn-outline-primary order-page-button'><Link to='/' className='text-purple'>Change your movie</Link></button>
-              <button className='btn btn-outline-primary order-page-button'>Check out now</button>
+              <button className='btn btn-outline-primary order-page-button'><Link to='/ticket-results' className='text-purple'>Check out now</Link></button>
             </div>
 
           </div>

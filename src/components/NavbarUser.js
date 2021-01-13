@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LogoTickitz from '../components/assets/VTickitz.png'
 import User from '../components/assets/user.png'
+import { Link } from 'react-router-dom'
 import '../components/NavbarUser.css'
 
 
@@ -10,7 +11,7 @@ class NavbarUser extends Component {
       <React.Fragment>
         <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top">
           <div className="container">
-            <a className="navbar-brand" href="#"> <img src={LogoTickitz} alt="" /> </a>
+            <a className="navbar-brand" href="#"><Link to='/'><img src={LogoTickitz} alt="" /></Link></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
