@@ -1,26 +1,4 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import NavbarUser from '../components/NavbarUser'
-import '../components/payment-page/payment-page.css'
-import FooterHome from '../components/FooterHome'
-import PayGoogle from '../components/assets/paygpay.png'
-import PayGopay from '../components/assets/paygopay.PNG'
-import PayVisa from '../components/assets/payvisa.png'
-import PayPaypal from '../components/assets/paypaypal.png'
-import PayDana from '../components/assets/paydana.png'
-import PayBCA from '../components/assets/paybca.png'
-import PayBRI from '../components/assets/paybri.png'
-import PayOvo from '../components/assets/payovo.png'
-import { Alert, Button, Form, FormControl, InputGroup } from "react-bootstrap";
-
-
-class PaymentPage extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <NavbarUser />
-
-        <div className='container order-page-margin'>
+<div className='container order-page-margin'>
           <div className='row'>
             <div className='col-md-8'>
               <p class='h5 font-weight-bold mb-3'>Payment Info</p>
@@ -80,7 +58,7 @@ class PaymentPage extends Component {
 
             <div className='col-md-4'>
               <p class='h5 font-weight-bold mb-3'>Personal Info</p>
-              <div className='container p-3 shadow'>
+              <div className='container shadow'>
                 <div className='row d-flex justify-content-center'>
                   <div className="form-group">
                     <label for="exampleInputFullName1">Full Name</label>
@@ -92,19 +70,6 @@ class PaymentPage extends Component {
                     <label for="exampleInputEmail2">Email</label>
                     <input type="email" className="form-control" placeholder="jonasrodri123@gmail.com" />
                   </div>
-                </div>
-
-                
-                <label className='ml-5'>Phone Number</label>
-                <div class="input-group special mb-3">
-                  <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">+62</span>
-                  </div>
-                  <input type="text" class="form-control" placeholder="81445687121" aria-label="Username" aria-describedby="basic-addon1"></input>
-                </div>
-
-                <div class="alert alert-warning" role="alert">
-                  Fill your data correctly!
                 </div>
               </div>
             </div>
@@ -164,16 +129,9 @@ class PaymentPage extends Component {
             </div>
 
             <div className='col-md-8 ml-2 d-flex justify-content-between mt-5'>
-              <button className='btn btn-outline-primary order-page-button'><Link to='/' className='text-purple'>Change your movie</Link></button>
+              <button className='btn btn-outline-primary order-page-button'>Change your movie</button>
               <button className='btn btn-outline-primary order-page-button'>Check out now</button>
             </div>
 
           </div>
         </div>
-        <FooterHome />
-      </React.Fragment>
-    )
-  }
-}
-
-export default PaymentPage

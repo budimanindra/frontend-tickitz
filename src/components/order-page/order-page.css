@@ -35,12 +35,56 @@
     border-color: #5F2EEA;
 }
 
-.form-check-input:checked{
-    background-color: red;
-    content: none;
+.cb input{
+    display:none;
 }
 
-.form-check-input{
-    background-color: yellow;
-    content: none;
+.cb input ~.check{
+    width: 20px;
+    height: 20px;
+    background-color: #D6D8E7;
+    display: block;
+    margin-right: 2px;
+    margin-left: 2px;
+    border-radius: 8px;
+}
+
+.cb input:checked ~.check{
+    background-color: #5F2EEA;
+}
+
+.sold input{
+    display:none;
+}
+
+.sold input ~.check{
+    background-color: #6E7191;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-right: 1px;
+    margin-left: 1px;
+    border-radius: 8px;
+}
+
+.sold input:checked ~.check{
+    background-color: #6E7191;
+}
+
+.love-nest input{
+    display:none;
+}
+
+.love-nest input ~.check{
+    background-color: #D6D8E7;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin-right: 1px;
+    margin-left: 1px;
+    border-radius: 8px;
+}
+
+.love-nest input:checked ~.check{
+    background-color: #F589D7;
 }

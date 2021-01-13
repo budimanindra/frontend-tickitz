@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import NavbarSignIn from '../components/NavbarSignIn'
 import mini1 from '../components/assets/mini1.PNG'
 import mini2 from '../components/assets/mini2.PNG'

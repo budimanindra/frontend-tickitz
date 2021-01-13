@@ -1,17 +1,4 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import NavbarUser from '../components/NavbarUser'
-import Sponsor from '../components/assets/sponsor2.png'
-import '../components/order-page/order-page.css'
-import FooterHome from '../components/FooterHome'
-import MovieSeat from '../components/MovieSeat'
-
-class OrderPage extends Component {
-  render() {
-    return (
-      <React.Fragment>
-        <NavbarUser />
-        <div className='container order-page-margin'>
+<div className='container order-page-margin'>
           <div className='row'>
             <div className='col-md-8'>
               <p className='font-weight-bold'>Movie Selected</p>
@@ -34,8 +21,8 @@ class OrderPage extends Component {
               <MovieSeat/>
 
               <div className='col-md-8 d-flex justify-content-between mt-5'>
-                <button className='btn btn-outline-primary order-page-button'><Link to='/' className='text-purple'>Change your movie</Link></button>
-                <button className='btn btn-outline-primary order-page-button'><Link to='/payment-page' className='text-purple'>Check out now</Link></button>
+                <button className='btn btn-outline-primary order-page-button'>Change your movie</button>
+                <button className='btn btn-outline-primary order-page-button'>Check out now</button>
               </div>
             </div>
 
@@ -100,11 +87,3 @@ class OrderPage extends Component {
             </div>
           </div>
         </div>
-        <FooterHome />
-
-      </React.Fragment>
-    )
-  }
-}
-
-export default OrderPage

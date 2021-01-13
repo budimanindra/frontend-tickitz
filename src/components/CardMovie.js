@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import Ebv from '../components/assets/sponsor1.png'
 import Cineone from '../components/assets/sponsor2.png'
 import Hiflix from '../components/assets/sponsor3.png'
@@ -57,7 +58,7 @@ class CardMovie extends Component {
           </div>
           <div className='row'>
           <div className='col'>
-              <a className=' btn btn-primary buttoncard'>Book now</a>
+          <button className='btn btn-primary buttoncard'><Link to='/order-page' className='white-text'>Book now</Link></button>
             </div>
             <div className='col'>
             <a className=''>Add to cart</a>
