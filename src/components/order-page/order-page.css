@@ -44,12 +44,3 @@
     background-color: yellow;
     content: none;
 }
-
-.button-seat{
-    background-color: red;
-    width: 26px;
-    height: 26px;
-}
-.button-seat:focus{
-    background-color: yellow;
-}

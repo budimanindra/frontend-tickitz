@@ -6,6 +6,8 @@ import SignIn from './pages/SignIn'
 import ForgotPassword from './pages/ForgotPassword'
 import OrderPage from './pages/OrderPage'
 import Home from './pages/Home'
+import PaymentPage from './pages/PaymentPage'
+import NewPage from './pages/NewPage'
 
 class App extends Component {
   render() {
@@ -13,7 +15,7 @@ class App extends Component {
       <React.Fragment>
         <BrowserRouter>
           <Switch>
-            <Route path="/" exact component={Home} />
+            <Route path="/" exact component={PaymentPage} />
             <Route path="/movie-details" exact component={MovieDetails} />
             <Route path="/sign-in" exact component={SignIn} />
             <Route path="/sign-up" exact component={SignUp} />
