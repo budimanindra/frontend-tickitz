@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
 import LogoTickitz from '../components/LogoTickitz'
 import '../components/forgot-pass/forgot-pass.css'
 

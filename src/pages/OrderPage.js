@@ -31,7 +31,7 @@ class OrderPage extends Component {
                 <button className='btn btn-light my-auto mr-4'><Link to='/'>Change Movie</Link></button>
               </div>
 
-              <MovieSeat/>
+              <MovieSeat />
 
               <div className='col-md-8 d-flex justify-content-between mt-5'>
                 <button className='btn btn-outline-primary order-page-button'><Link to='/' className='text-purple'>Change your movie</Link></button>
@@ -62,28 +62,28 @@ class OrderPage extends Component {
                 <div className='row font-order-info'>
                   <div className='col'>
                     Tuesday, 07 July 2020
-                                    </div>
+                  </div>
                   <div className='col d-flex justify-content-end font-weight-bold'>
                     02:00pm
-                                    </div>
+                  </div>
                 </div>
 
                 <div className='row font-order-info'>
                   <div className='col'>
                     One ticket price
-                                    </div>
+                    </div>
                   <div className='col d-flex justify-content-end font-weight-bold'>
                     $10
-                                    </div>
+                  </div>
                 </div>
 
                 <div className='row font-order-info'>
                   <div className='col'>
                     Seat choosed
-                                    </div>
+                  </div>
                   <div className='col d-flex justify-content-end font-weight-bold'>
                     C4, C5, C6
-                                    </div>
+                  </div>
                 </div>
 
                 <hr></hr>
@@ -91,10 +91,10 @@ class OrderPage extends Component {
                 <div className='row font-order-info'>
                   <div className='col'>
                     Total Payment
-                                    </div>
+                  </div>
                   <div className='h4 col d-flex justify-content-end font-weight-bold'>
                     $30
-                                    </div>
+                  </div>
                 </div>
               </div>
             </div>

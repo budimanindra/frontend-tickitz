@@ -10,21 +10,14 @@ class MovieSeat extends Component {
     return (
       <React.Fragment>
         <p className='my-4 font-weight-bold'>Choose your seat</p>
-
-
         <div className='col-md-8 shadow text-center mb-2'>
           <p className='py-5'>Screen</p>
           <div className='row'>
-
             <div className='col-md-12 d-flex justify-content-center'>
-
-
-
-
               <table>
                 <tr>
                   A
-          <td>
+                  <td>
                     <label className='cb'>
                       <input type="checkbox" value="A1" />
                       <span className='check'></span>
@@ -116,7 +109,7 @@ class MovieSeat extends Component {
 
                 <tr>
                   B
-          <td>
+                  <td>
                     <label className='cb'>
                       <input type="checkbox" value="B1" />
                       <span className='check'></span>
@@ -537,20 +530,12 @@ class MovieSeat extends Component {
                     </label>
                   </td>
 
-                  <td>
+                  <td colspan="2">
                     <label className='love-nest'>
-                      <input type="checkbox" value="F9" />
+                      <input type="checkbox" value="F9 F10" />
                       <span className='check'></span>
                     </label>
                   </td>
-
-                  <td>
-                    <label className='love-nest'>
-                      <input type="checkbox" value="F10" />
-                      <span className='check'></span>
-                    </label>
-                  </td>
-
 
                   <td>
                     <label className='cb'>

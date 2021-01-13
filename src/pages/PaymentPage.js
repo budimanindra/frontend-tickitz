@@ -11,7 +11,6 @@ import PayDana from '../components/assets/paydana.png'
 import PayBCA from '../components/assets/paybca.png'
 import PayBRI from '../components/assets/paybri.png'
 import PayOvo from '../components/assets/payovo.png'
-import { Alert, Button, Form, FormControl, InputGroup } from "react-bootstrap";
 
 
 class PaymentPage extends Component {
