@@ -9,9 +9,12 @@ import card3 from '../components/assets/card3.png'
 import UpcomingMovies from '../components/UpcomingMovies'
 import FooterHome from '../components/FooterHome'
 import '../components/home/home.css'
+import http from '../helpers/http'
+
 
 
 class Home extends Component {
+
   render() {
     return (
       <React.Fragment>

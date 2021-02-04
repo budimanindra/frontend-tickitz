@@ -1,20 +1,18 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import Ebv from '../components/assets/sponsor1.png'
 import './CardMovie.css'
 
-class CardMovie extends Component {
-  render() {
-    return (
-      <React.Fragment>
+
+const CardMovie = (props) => {
+    return(
         <div className='container-fluid cardticket shadow p-4'>
           <div className='row'>
             <div className='col'>
-              <img src={Ebv} alt="logo EBV" />
+              <img src={props.cinemalogo} alt="logo EBV" />
             </div>
             <div className='col'>
-              <h5>ebv.id</h5>
-              <p>Whatever street No.12, South Purwokerto</p>
+              <h5>{props.cinema}</h5>
+              <p>{props.location}</p>
             </div>
           </div>
           <hr></hr>
@@ -59,13 +57,11 @@ class CardMovie extends Component {
           <button className='btn btn-primary buttoncard'><Link to='/order-page' className='white-text'>Book now</Link></button>
             </div>
             <div className='col'>
-            <a className=''>Add to cart</a>
+            <a href='#'>Add to cart</a>
             </div>
           </div>
         </div>
-      </React.Fragment>
     )
-  }
 }
 
 export default CardMovie

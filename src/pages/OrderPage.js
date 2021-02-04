@@ -7,6 +7,17 @@ import FooterHome from '../components/FooterHome'
 import MovieSeat from '../components/MovieSeat'
 
 class OrderPage extends Component {
+
+  state = {
+    price: 0
+  }
+  
+  handleCounterChange = (newValue) => {
+    this.setState({
+      price: newValue
+    })
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -31,7 +42,7 @@ class OrderPage extends Component {
                 <button className='btn btn-light my-auto mr-4'><Link to='/'>Change Movie</Link></button>
               </div>
 
-              <MovieSeat />
+              <MovieSeat onCounterChange={(value) => this.handleCounterChange(value)} />
 
               <div className='col-md-8 d-flex justify-content-between mt-5'>
                 <button className='btn btn-outline-primary order-page-button'><Link to='/' className='text-purple'>Change your movie</Link></button>
@@ -73,7 +84,7 @@ class OrderPage extends Component {
                     One ticket price
                     </div>
                   <div className='col d-flex justify-content-end font-weight-bold'>
-                    $10
+                    ${this.state.price}
                   </div>
                 </div>
 

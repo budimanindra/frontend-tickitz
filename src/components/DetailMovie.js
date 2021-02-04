@@ -11,7 +11,7 @@ class DetailMovie extends Component {
 
             <div className='col-md-3'>
               <div className="cardbox shadow-lg margin-col-image">
-                <img src={MovieImage} className='movie-image' />
+                <img src={MovieImage} alt='Movie Image' className='movie-image' />
               </div>
             </div>
 

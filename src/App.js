@@ -8,24 +8,31 @@ import OrderPage from './pages/OrderPage'
 import Home from './pages/Home'
 import PaymentPage from './pages/PaymentPage'
 import TicketResults from './pages/TicketResult'
+import AdminPage from './pages/AdminPage'
+
+import {Provider} from 'react-redux'
+
+import PrivateRoute from './components/PrivateRoute'
+import store from './redux/store'
 
 class App extends Component {
   render() {
     return (
-      <React.Fragment>
+      <Provider store={store}>
         <BrowserRouter>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/movie-details" exact component={MovieDetails} />
+            <Route path="/movie-details/:id" exact component={MovieDetails} />
             <Route path="/sign-in" exact component={SignIn} />
             <Route path="/sign-up" exact component={SignUp} />
             <Route path="/forgot-password" exact component={ForgotPassword} />
             <Route path="/order-page" exact component={OrderPage} />
-            <Route path="/payment-page" exact component={PaymentPage} />
-            <Route path="/ticket-results" exact component={TicketResults} />
+            <PrivateRoute path="/payment-page" privateComponent={PaymentPage} />
+            <Route path='/admin-control' exact Component={TicketResults} />
+            <PrivateRoute path="/admin-page" privateComponent={AdminPage} />
           </Switch>
         </BrowserRouter>
-      </React.Fragment>
+      </Provider>
     )
   }
 }

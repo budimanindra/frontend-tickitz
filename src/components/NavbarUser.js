@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import LogoTickitz from '../components/assets/VTickitz.png'
-import User from '../components/assets/user.png'
+import User from '../components/assets/user2.png'
 import { Link } from 'react-router-dom'
 import '../components/NavbarUser.css'
 

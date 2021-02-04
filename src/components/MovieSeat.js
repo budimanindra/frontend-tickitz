@@ -6,6 +6,31 @@ import lovenest from '../components/assets/lovenest.png'
 
 
 class MovieSeat extends Component {
+
+  state = {
+    price: 0
+  }
+
+  handleCounterChange = (newValue) => {
+    this.props.onCounterChange(newValue)
+  }
+
+  handlePlus = () => {
+    this.setState({
+      price: this.state.price + 10
+    }, () => {
+      this.handleCounterChange(this.state.price)
+    })
+  }
+
+  handleMinus = () => {
+    this.setState({
+      price: this.state.price - 10
+    }, () => {
+      this.handleCounterChange(this.state.price)
+    })
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -19,12 +44,12 @@ class MovieSeat extends Component {
                   A
                   <td>
                     <label className='cb'>
-                      <input type="checkbox" value="A1" />
+                      <input type="checkbox" value="A1" onClick={this.handlePlus}/>
                       <span className='check'></span>
                     </label>
                   </td>
                   <td>
-                    <label className='cb'>
+                    <label className='cb' onClick={this.handleMinus}>
                       <input type="checkbox" value="A2" />
                       <span className='check'></span>
                     </label>

@@ -1,31 +1,58 @@
 import React, { Component } from 'react'
-import {Link} from 'react-router-dom'
-// import {Button} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 import NavbarUser from '../components/NavbarUser'
 import DetailMovie from '../components/DetailMovie'
-import Showtimes from '../components/Showtimes'
+import ShowTimesTicket from '../components/ShowTimesTicket'
 import FooterHome from '../components/FooterHome'
-import MovieImage from '../components/assets/card1.png'
-
+import http from '../helpers/http'
+import Moment from 'react-moment'
 
 
 class MovieDetails extends Component {
+
+  state = {
+    errorMsg: '',
+    movie: {
+
+    }
+  }
+
+  getDetailMovie = async (id) => {
+    try {
+      const result = await http().get(`/movies/${id}`)
+      this.setState({
+        errorMsg: '',
+        movie: result.data.results
+      })
+    } catch (err) {
+      this.setState({
+        errorMsg: err.response.message,
+        movie: {}
+      })
+    }
+  }
+
+  componentDidMount() {
+    const { id } = this.props.match.params
+    this.getDetailMovie(id)
+  }
+
   render() {
     return (
       <React.Fragment>
-        <NavbarUser/>
+        <NavbarUser />
         <div className='container-fluid margin-top-detail'>
           <div className='row'>
 
-            <div className='col-md-3'>
+            <div className='col-md-3 mb-5'>
               <div className="cardbox shadow-lg margin-col-image">
-                <img src={MovieImage} className='movie-image' />
+                <img src={this.state.movie.image} className='movie-image' />
               </div>
             </div>
 
             <div className='col-md-9'>
-              <h3 className="margin-col-description">Spider-Man: Homecoming</h3>
-              <p className="margin-col-description">Adventure, Action, Sci-Fi</p>
+              <h3 className="margin-col-description">{this.state.movie.name}</h3>
+              <p className="margin-col-description">{this.state.movie.genreName}</p>
 
               <div className='row margin-col-description'>
                 <div className='col'>
@@ -37,10 +64,10 @@ class MovieDetails extends Component {
               </div>
               <div className='row margin-col-description'>
                 <div className='col'>
-                  June 28, 2017
+                <Moment format='MMMM, D YYYY'>{this.state.movie.releaseDate}</Moment>
                 </div>
                 <div className='col'>
-                  Jon Watts
+                  {this.state.movie.directedBy}
                 </div>
               </div>
 
@@ -56,10 +83,10 @@ class MovieDetails extends Component {
               </div>
               <div className='row margin-col-description'>
                 <div className='col'>
-                  2 Hours 13 minutes
+                  {this.state.movie.duration} minutes
                 </div>
                 <div className='col'>
-                  Tom Holland, Michael Keaton, Robert Downey Jr., ...
+                  {this.state.movie.castName}
                 </div>
               </div>
 
@@ -70,7 +97,7 @@ class MovieDetails extends Component {
               </h5>
 
               <p className="margin-col-description text-justify mr-5">
-                Thrilled by his experience with the Avengers, Peter returns home, where he lives with his Aunt May, under the watchful eye of his new mentor Tony Stark, Peter tries to fall back into his normal daily routine - distracted by thoughts of proving himself to be more than just your friendly neighborhood Spider-Man - but when the Vulture emerges as a new villain, everything that Peter holds most important will be threatened. 
+                {this.state.movie.synopsis}
               </p>
 
             </div>
@@ -78,8 +105,24 @@ class MovieDetails extends Component {
           </div>
 
         </div>
-        <Showtimes/>
-        <FooterHome/>
+
+        <div className='row d-flex justify-content-center font-weight-bold mt-5'>Showtimes and Tickets</div>
+
+        <div className='row showlocdate'>
+          <div className="col dropdown">
+            <a className="btn btn-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              21/07/20</a>
+          </div>
+          <div className="col dropdown">
+            <a className="btn btn-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Purwokerto</a>
+          </div>
+        </div>
+        <ShowTimesTicket />
+        <p className='text-center text-view'>view more</p>
+        <FooterHome />
       </React.Fragment>
     )
   }
