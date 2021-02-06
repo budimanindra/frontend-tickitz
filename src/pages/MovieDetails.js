@@ -6,6 +6,8 @@ import ShowTimesTicket from '../components/ShowTimesTicket'
 import FooterHome from '../components/FooterHome'
 import http from '../helpers/http'
 import Moment from 'react-moment'
+import { ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 class MovieDetails extends Component {
@@ -110,15 +112,27 @@ class MovieDetails extends Component {
 
         <div className='row showlocdate'>
           <div className="col dropdown">
-            <a className="btn btn-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              21/07/20</a>
+          <ButtonGroup>
+            <DropdownButton as={ButtonGroup} variant="secondary" title="Date" id="bg-nested-dropdown">
+              <Dropdown.Item eventKey="1">21/07/2021</Dropdown.Item>
+              <Dropdown.Item eventKey="2">21/08/2021</Dropdown.Item>
+              <Dropdown.Item eventKey="3">21/09/2021</Dropdown.Item>
+            </DropdownButton>
+          </ButtonGroup>
           </div>
+
           <div className="col dropdown">
-            <a className="btn btn-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Purwokerto</a>
+          <ButtonGroup>
+            <DropdownButton as={ButtonGroup} variant="secondary" title="City" id="bg-nested-dropdown">
+              <Dropdown.Item eventKey="1">Jakarta</Dropdown.Item>
+              <Dropdown.Item eventKey="2">Balikpapan</Dropdown.Item>
+              <Dropdown.Item eventKey="3">Mataram</Dropdown.Item>
+              <Dropdown.Item eventKey="4">Purwokerto</Dropdown.Item>
+            </DropdownButton>
+          </ButtonGroup>
           </div>
+
+
         </div>
         <ShowTimesTicket />
         <p className='text-center text-view'>view more</p>
