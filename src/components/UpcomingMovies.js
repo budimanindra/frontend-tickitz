@@ -5,8 +5,35 @@ import card4 from '../components/assets/card4.png'
 import card5 from '../components/assets/card5.png'
 import card6 from '../components/assets/card6.png'
 import '../components/UpcomingMovies.css'
+import http from '../helpers/http'
+
 
 class UpcomingMovies extends Component {
+
+  state = {
+    errorMsg: '',
+    upcoming: [{}],
+  }
+
+  getUpcoming = async () => {
+    try {
+      const result = await http().get(`/movies/upcoming-movies`)
+      this.setState({
+        errorMsg: '',
+        upcoming: result.data.results
+      })
+    } catch (err) {
+      this.setState({
+        errorMsg: err.response.message,
+        upcoming: {}
+      })
+    }
+  }
+
+  componentDidMount() {
+    this.getUpcoming()
+  }
+
   render() {
     return (
 
@@ -28,14 +55,18 @@ class UpcomingMovies extends Component {
         </div>
 
         <div className="row mt-5">
+          
           <div className="col-md">
             <div className="card-upcoming-movies shadow-lg">
-              <img src={card1} />
-              <p className="movie-title">Spider-Man</p>
-              <p className="movie-genre">Adventure, Action, Sci-Fi</p>
-              <button className="btn btn-outline-primary upcoming-button custom-text" type="button"><Link to='/movie-details'className='custom-text'>Details</Link></button>
+            <a href='http://localhost:3000/movie-detail/53'>
+            <img src={this.state.upcoming[0].image} className="shadow-lg card-now-showing img-fluid"/>
+            </a>
+              <p className="movie-title">{this.state.upcoming[0].name}</p>
+              <p className="movie-genre">{this.state.upcoming[0].genre}</p>
+              <button className="btn btn-outline-primary upcoming-button custom-text" type="button"><Link to='/movie-detail/53'className='custom-text'>Details</Link></button>
             </div>
           </div>
+
           <div className="col-md">
             <div className="card-upcoming-movies shadow-lg">
               <img src={card5} className="" />

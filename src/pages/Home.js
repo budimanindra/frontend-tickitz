@@ -12,8 +12,30 @@ import '../components/home/home.css'
 import http from '../helpers/http'
 
 
-
 class Home extends Component {
+  state = {
+    errorMsg: '',
+    showing: [{}],
+  }
+
+  getMovies = async () => {
+    try {
+      const result = await http().get(`/movies/now-showing`)
+      this.setState({
+        errorMsg: '',
+        showing: result.data.results
+      })
+    } catch (err) {
+      this.setState({
+        errorMsg: err.response.message,
+        showing: {}
+      })
+    }
+  }
+
+  componentDidMount() {
+    this.getMovies()
+  }
 
   render() {
     return (
@@ -41,20 +63,20 @@ class Home extends Component {
           </div>
 
           <div className="row">
-            <div className="col">
-              <img src={card1} className="shadow-lg card-now-showing"/>
+            <div className="col"><a href='http://localhost:3000/movie-details/49'>
+              <img src={this.state.showing[0].image} className="shadow-lg card-now-showing img-fluid"/></a>
             </div>
-            <div className="col">
-              <img src={card2} className="shadow-lg card-now-showing"/>
+            <div className="col"><a href='http://localhost:3000/movie-details/49'>
+              <img src={card2} className="shadow-lg card-now-showing"/></a>
             </div>
-            <div className="col">
-              <img src={card3} className="shadow-lg card-now-showing"/>
+            <div className="col"><a href='http://localhost:3000/movie-details/49'>
+              <img src={card3} className="shadow-lg card-now-showing"/></a>
             </div>
-            <div className="col">
-              <img src={card1} className="shadow-lg card-now-showing"/>
+            <div className="col"><a href='http://localhost:3000/movie-details/49'>
+              <img src={card1} className="shadow-lg card-now-showing"/></a>
             </div>
-            <div className="col">
-              <img src={card2} className="shadow-lg card-now-showing"/>
+            <div className="col"><a href='http://localhost:3000/movie-details/49'>
+              <img src={card2} className="shadow-lg card-now-showing"/></a>
             </div>
           </div>
         </div>
