@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import {  } from '../redux/actions/movie'
 import { Link } from 'react-router-dom'
 import NavbarUser from '../components/NavbarUser'
 import Sponsor from '../components/assets/sponsor2.png'
@@ -7,16 +9,6 @@ import FooterHome from '../components/FooterHome'
 import MovieSeat from '../components/MovieSeat'
 
 class OrderPage extends Component {
-
-  state = {
-    price: 0
-  }
-  
-  handleCounterChange = (newValue) => {
-    this.setState({
-      price: newValue
-    })
-  }
 
   render() {
     return (
@@ -38,11 +30,12 @@ class OrderPage extends Component {
 
             <div className='container'>
               <div className='col-md-8 d-flex justify-content-between p-3 shadow-sm'>
-                <span className='font-weight-bold my-auto ml-4'>Spider-Man: Homecoming</span>
+                {/* <span className='font-weight-bold my-auto ml-4'>Spider-Man: Homecoming</span> */}
+                <span className='font-weight-bold my-auto ml-4'>{this.props.movie.details.name}</span>
                 <button className='btn btn-light my-auto mr-4'><Link to='/'>Change Movie</Link></button>
               </div>
 
-              <MovieSeat onCounterChange={(value) => this.handleCounterChange(value)} />
+              <MovieSeat/>
 
               <div className='col-md-8 d-flex justify-content-between mt-5'>
                 <button className='btn btn-outline-primary order-page-button'><Link to='/' className='text-purple'>Change your movie</Link></button>
@@ -66,7 +59,7 @@ class OrderPage extends Component {
                     Movie selected
                   </div>
                   <div className='col d-flex justify-content-end font-weight-bold'>
-                    Spider-Man: Homecoming
+                  {this.props.movie.details.name}
                     </div>
                 </div>
 
@@ -84,7 +77,7 @@ class OrderPage extends Component {
                     One ticket price
                     </div>
                   <div className='col d-flex justify-content-end font-weight-bold'>
-                    ${this.state.price}
+                    
                   </div>
                 </div>
 
@@ -118,4 +111,13 @@ class OrderPage extends Component {
   }
 }
 
-export default OrderPage
+const mapStateToProps = state => ({
+  movie: state.movie
+})
+
+const mapDispatchToProps = {
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(OrderPage)
+
+// export default OrderPage

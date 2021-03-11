@@ -58,12 +58,12 @@ class UpcomingMovies extends Component {
           
           <div className="col-md">
             <div className="card-upcoming-movies shadow-lg">
-            <a href='http://localhost:3000/movie-detail/53'>
+            <a href='http://localhost:3000/movie-detail/54'>
             <img src={this.state.upcoming[0].image} className="shadow-lg card-now-showing img-fluid"/>
             </a>
               <p className="movie-title">{this.state.upcoming[0].name}</p>
-              <p className="movie-genre">{this.state.upcoming[0].genre}</p>
-              <button className="btn btn-outline-primary upcoming-button custom-text" type="button"><Link to='/movie-detail/53'className='custom-text'>Details</Link></button>
+              <p className="movie-genre">{this.state.upcoming[0].genreName}</p>
+              <button className="btn btn-outline-primary upcoming-button custom-text" type="button"><Link to='/movie-detail/54'className='custom-text'>Details</Link></button>
             </div>
           </div>
 

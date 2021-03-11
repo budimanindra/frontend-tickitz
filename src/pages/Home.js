@@ -49,9 +49,9 @@ class Home extends Component {
             </div>
 
             <div className="col md-6">
-              <img className="mini1 shadow-lg" src={mini1} alt=""/>
-                <img className="mini2 shadow-lg" src={mini2} alt=""/>
-                  <img className="mini3 shadow-lg" src={mini3} alt=""/>
+              <img className="mini1 shadow-lg" src={mini1} alt="" />
+              <img className="mini2 shadow-lg" src={mini2} alt="" />
+              <img className="mini3 shadow-lg" src={mini3} alt="" />
             </div>
           </div>
         </div>
@@ -62,33 +62,44 @@ class Home extends Component {
             <button className="view-all1">view all</button>
           </div>
 
-          <div className="row">
-            <div className="col"><a href='http://localhost:3000/movie-details/49'>
-              <img src={this.state.showing[0].image} className="shadow-lg card-now-showing img-fluid"/></a>
+          <div className="row"> 
+
+            <React.Fragment>
+              
+                  {this.state.showing.map(movie => (
+                    <div className="col"><a href={`http://localhost:3000/movie-detail/${movie.id}`}>
+                    <img height='200' width='200' src={movie.image} className="shadow-lg card-now-showing img-fluid" /></a>
+                  </div>
+                  ))}
+    
+            </React.Fragment>
+
+            {/* <div className="col"><a href='http://localhost:3000/movie-detail/49'>
+              <img src={this.state.showing[0].image} className="shadow-lg card-now-showing img-fluid" /></a>
             </div>
             <div className="col"><a href='http://localhost:3000/movie-details/49'>
-              <img src={card2} className="shadow-lg card-now-showing"/></a>
+              <img src={card2} className="shadow-lg card-now-showing" /></a>
             </div>
             <div className="col"><a href='http://localhost:3000/movie-details/49'>
-              <img src={card3} className="shadow-lg card-now-showing"/></a>
+              <img src={card3} className="shadow-lg card-now-showing" /></a>
             </div>
             <div className="col"><a href='http://localhost:3000/movie-details/49'>
-              <img src={card1} className="shadow-lg card-now-showing"/></a>
+              <img src={card1} className="shadow-lg card-now-showing" /></a>
             </div>
             <div className="col"><a href='http://localhost:3000/movie-details/49'>
-              <img src={card2} className="shadow-lg card-now-showing"/></a>
-            </div>
+              <img src={card2} className="shadow-lg card-now-showing" /></a>
+            </div> */}
           </div>
         </div>
-        
-        <UpcomingMovies/>
+
+        <UpcomingMovies />
 
         <div className="container margin-member shadow-lg pt-5">
           <p className="vanguard">Be the vanguard of the</p>
           <h1 className="moviegoers">Moviegoers</h1>
           <div className="submit-email" className="row">
             <div className="col-auto">
-              <input type="email" className="form-control margin-form-email" placeholder="Type your email"/>
+              <input type="email" className="form-control margin-form-email" placeholder="Type your email" />
             </div>
             <div className="col-auto">
               <button type="submit" className="btn btn-primary mb-3 join-now-button">Join now</button>
@@ -102,7 +113,7 @@ class Home extends Component {
           </div>
         </div>
 
-        <FooterHome/>
+        <FooterHome />
 
       </React.Fragment>
     )

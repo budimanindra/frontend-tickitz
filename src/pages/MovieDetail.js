@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { FormControl, ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import { getMovie, getShowDate, getShowLocation, getAvailCinema } from '../redux/actions/movie'
 import http from '../helpers/http'
 import NavbarUser from '../components/NavbarUser'
+import CardMovie from '../components/CardMovie'
 import ShowTimesTicket from '../components/ShowTimesTicket'
 import FooterHome from '../components/FooterHome'
 
@@ -48,7 +48,6 @@ class MovieDetail extends Component {
   }
 
   async componentDidMount() {
-
     const { id } = this.props.match.params
     const resultsDetailMovie = await http().get(`/movies/${id}`)
     const dataMovie = this.movieDetailFormat(resultsDetailMovie.data.results)
@@ -180,7 +179,20 @@ class MovieDetail extends Component {
             </div>
           </div>
 
-          <ShowTimesTicket />
+          {/* <ShowTimesTicket /> */}
+
+        <React.Fragment>
+        <div className='container-fluid'>
+          <div className='row mt-5'>
+            {this.props.movie.availCinema.map( cinema => (
+              <div className='col'>
+                <CardMovie cinemalogo='' cinema={cinema.name} location={cinema.address} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </React.Fragment>
+
           <p className='text-center text-view'>view more</p>
           <FooterHome />
 
@@ -229,7 +241,8 @@ class MovieDetail extends Component {
               Loading cinema list...
             </React.Fragment>
           }
-          {!this.props.movie.isCinemaLoading &&
+         
+         {!this.props.movie.isCinemaLoading &&
             <React.Fragment>
               {this.props.movie.availCinema.map(cinema => (
                 <React.Fragment>
@@ -253,6 +266,8 @@ class MovieDetail extends Component {
               ))}
             </React.Fragment>
           } */}
+
+          
         </div>
       )
     } else {

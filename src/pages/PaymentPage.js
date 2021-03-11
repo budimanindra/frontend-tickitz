@@ -93,7 +93,7 @@ class PaymentPage extends Component {
                   </div>
                 </div>
 
-                
+
                 <label className='ml-5'>Phone Number</label>
                 <div class="input-group special mb-3">
                   <div class="input-group-prepend">

@@ -9,8 +9,7 @@ import IconIG from '../components/assets/icon_ig.png'
 import IconTW from '../components/assets/icon_tw.png'
 import IconYT from '../components/assets/icon_yt.png'
 
-class FooterHome extends Component {
-  render() {
+function FooterHome () {
     return (
     <React.Fragment>
       <div className="container-fluid">
@@ -79,7 +78,6 @@ class FooterHome extends Component {
       <p className="text-center footer-tickitz">© 2020 Tickitz, All Rights Reserved.</p>
     </React.Fragment>
     )
-  }
 }
 
 export default FooterHome
